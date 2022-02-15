@@ -11,11 +11,18 @@ namespace Basic
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to basic Core Programms");
-            Console.Write("Enter the number: ");
+            Console.Write("Enter the vallue of N: ");
             //VARIABLES
-            int number = Convert.ToInt32(Console.ReadLine());
-            string result = number % 2 == 0 ? "Number is even" : "Number is odd";
-            Console.WriteLine(result);
+            int N = Convert.ToInt32(Console.ReadLine());
+            int i = 1;
+            while (i <= N)
+            {
+                double result = Math.Pow(2, i);
+                Console.WriteLine(result);
+                i++;
+            }
         }
+
     }
+
 }
