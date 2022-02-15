@@ -10,37 +10,43 @@ namespace Basic
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to basic Core Programs");
-            numbers N1 = new numbers(200, 546, 955);
-            N1.LargestNumber();
+            Console.WriteLine("Welcome to basic Core Programms");
+            LeapYear Y1 = new LeapYear(1500);
+            Y1.CheckLeapYear();
         }
-        public class numbers
-        {
-            int number1;
-            int number2;
-            int number3;
+    }
+    public class LeapYear
+    {
+        public int year;
 
-            public numbers(int number1, int number2, int number3)
+        public LeapYear(int year)
+        {
+            this.year = year;
+        }
+        public void CheckLeapYear()
+        {
+            if (year > 1000)
             {
-                this.number1 = number1;
-                this.number2 = number2;
-                this.number3 = number3;
-            }
-            public void LargestNumber()
-            {
-                if (number1 > number2 && number1 > number3)
+
+                if (year % 400 == 0 && year % 100 == 0)
                 {
-                    Console.WriteLine($"{number1} is largest");
+                    Console.WriteLine($"{year} is a leap year");
                 }
-                else if (number2 > number1 && number2 > number3)
+                else if (year % 4 == 0 && year % 100 != 0)
                 {
-                    Console.WriteLine($"{number2} is largest");
+                    Console.WriteLine($"{year} is a leap year");
                 }
                 else
                 {
-                    Console.WriteLine($"{number3} is largest");
+                    Console.WriteLine($"{year} is not a leap year");
                 }
             }
+            else
+            {
+                Console.WriteLine("Please enter a four digit Number");
+            }
         }
+
     }
+
 }
