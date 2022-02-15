@@ -11,22 +11,11 @@ namespace Basic
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to basic Core Programms");
-            //CONSTANTS
-            const int MAXNUMBEROFFLIPPINGCOIN = 20;
+            Console.Write("Enter the number: ");
             //VARIABLES
-            int noOfFlipping = 0;
-            int tailCounter = 0;
-            int headCounter = 0;
-
-            while (noOfFlipping < MAXNUMBEROFFLIPPINGCOIN)
-            {
-                Random random = new Random();
-                double flipCoin = random.NextDouble();
-                int result = flipCoin < 0.5 ? tailCounter++ : headCounter++;
-                noOfFlipping++;
-            }
-            Console.WriteLine($"The percentage of HEAD winning is {headCounter * 100 / MAXNUMBEROFFLIPPINGCOIN}");
-            Console.WriteLine($"The percentage of TAIL winning is {tailCounter * 100 / MAXNUMBEROFFLIPPINGCOIN}");
+            int number = Convert.ToInt32(Console.ReadLine());
+            string result = number % 2 == 0 ? "Number is even" : "Number is odd";
+            Console.WriteLine(result);
         }
     }
 }
