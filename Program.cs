@@ -11,16 +11,19 @@ namespace Basic
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to basic Core Programms");
-            Console.Write("Enter the vallue of N: ");
+            Console.Write("Enter the value of N: ");
             //VARIABLES
             int N = Convert.ToInt32(Console.ReadLine());
             int i = 1;
+            float nthHarmonicValue = 0;
+
             while (i <= N)
             {
-                double result = Math.Pow(2, i);
-                Console.WriteLine(result);
+                Console.Write($"1/{i} + ");
+                nthHarmonicValue += 1 / (float)i;
                 i++;
             }
+            Console.WriteLine($"\n{nthHarmonicValue}");
         }
 
     }
